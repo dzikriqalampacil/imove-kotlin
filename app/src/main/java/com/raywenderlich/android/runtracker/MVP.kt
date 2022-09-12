@@ -75,7 +75,6 @@ class MapPresenter(private val activity: AppCompatActivity) {
 
     val currentUi = ui.value
     ui.value = currentUi?.copy(
-        formattedPace = Ui.EMPTY.formattedPace,
         formattedDistance = Ui.EMPTY.formattedDistance
     )
   }
@@ -86,7 +85,6 @@ class MapPresenter(private val activity: AppCompatActivity) {
 }
 
 data class Ui(
-    val formattedPace: String,
     val formattedDistance: String,
     val currentLocation: LatLng?,
     val userPath: List<LatLng>
@@ -95,7 +93,6 @@ data class Ui(
   companion object {
 
     val EMPTY = Ui(
-        formattedPace = "",
         formattedDistance = "",
         currentLocation = null,
         userPath = emptyList()
