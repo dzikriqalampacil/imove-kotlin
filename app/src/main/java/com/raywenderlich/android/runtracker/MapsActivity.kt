@@ -52,6 +52,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
   private lateinit var binding: ActivityMapsBinding
 
   private val presenter = MapPresenter(this)
+  private var counter = 1
 
   override fun onCreate(savedInstanceState: Bundle?) {
     setTheme(R.style.AppTheme)
@@ -115,9 +116,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
   @SuppressLint("MissingPermission")
   private fun updateUi(ui: Ui) {
+
     if (ui.currentLocation != null && ui.currentLocation != map.cameraPosition.target) {
       map.isMyLocationEnabled = true
-      map.animateCamera(CameraUpdateFactory.newLatLngZoom(ui.currentLocation, 14f))
+      if (counter == 1) {
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(ui.currentLocation, 14f))
+        counter++
+      }
     }
     binding.container.txtDistance.text = ui.formattedDistance
     drawRoute(ui.userPath)
