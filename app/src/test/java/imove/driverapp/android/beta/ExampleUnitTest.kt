@@ -1,16 +1,16 @@
 /*
  * Copyright (c) 2021 Razeware LLC
- *
+ * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- *
+ * 
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- *
+ * 
  * Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
  * distribute, sublicense, create a derivative work, and/or sell copies of the
  * Software in any work that is designed, intended, or marketed for pedagogical or
@@ -18,11 +18,11 @@
  * or information technology.  Permission for such use, copying, modification,
  * merger, publication, distribution, sublicensing, creation of derivative works,
  * or sale is expressly withheld.
- *
+ * 
  * This project and source code may use libraries or frameworks that are
  * released under various Open-Source licenses. Use of those libraries and
  * frameworks are governed by their own individual licenses.
- *
+ * 
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -32,25 +32,20 @@
  * THE SOFTWARE.
  */
 
-package com.raywenderlich.android.runtracker
+package imove.driverapp.android.beta
 
-import android.Manifest
-import android.os.Build
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
+import org.junit.Test
 
-class PermissionsManager(activity: AppCompatActivity,
-    private val locationProvider: LocationProvider) {
+import org.junit.Assert.*
 
-  private val locationPermissionProvider = activity.registerForActivityResult(
-      ActivityResultContracts.RequestPermission()) { granted ->
-    if (granted) {
-      locationProvider.getUserLocation()
-    }
+/**
+ * Example local unit test, which will execute on the development machine (host).
+ *
+ * See [testing documentation](http://d.android.com/tools/testing).
+ */
+class ExampleUnitTest {
+  @Test
+  fun addition_isCorrect() {
+    assertEquals(4, 2 + 2)
   }
-
-  fun requestUserLocation() {
-    locationPermissionProvider.launch(Manifest.permission.ACCESS_FINE_LOCATION)
-  }
-
 }

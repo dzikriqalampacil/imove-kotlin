@@ -1,4 +1,4 @@
-package com.raywenderlich.android.runtracker
+package imove.driverapp.android.beta
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -10,7 +10,8 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.PolylineOptions
-import com.raywenderlich.android.runtracker.databinding.ActivityMapsBinding
+import imove.driverapp.android.beta.R
+import imove.driverapp.android.beta.databinding.ActivityMapsBinding
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 

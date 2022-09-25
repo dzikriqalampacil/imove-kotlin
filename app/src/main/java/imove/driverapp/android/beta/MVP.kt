@@ -1,8 +1,9 @@
-package com.raywenderlich.android.runtracker
+package imove.driverapp.android.beta
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import com.google.android.gms.maps.model.LatLng
+import imove.driverapp.android.beta.R
 
 class MapPresenter(private val activity: AppCompatActivity) {
 

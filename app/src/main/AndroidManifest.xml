@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.raywenderlich.android.runtracker"
+<manifest package="imove.driverapp.android.beta"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -25,7 +25,7 @@
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
     <activity
-        android:name=".MapsActivity"
+        android:name="imove.driverapp.android.beta.MapsActivity"
         android:theme="@style/SplashTheme">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
